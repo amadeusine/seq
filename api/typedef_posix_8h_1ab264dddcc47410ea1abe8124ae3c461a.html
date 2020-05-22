@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Typedef fmt::v6::wcstring_view &mdash; Seq 0.9.7 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Typedef fmt::v6::wformat_context" href="typedef_core_8h_1ae514fba8ccc510222d12b1cacbe8f2f0.html" />
+    <link rel="prev" title="Typedef fmt::v6::void_t" href="typedef_core_8h_1a47869670d22f3ca94d82b51c47386e76.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #333131" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Seq
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookbook.html">Cookbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python.html">Calling Python from Seq</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../embed.html">Calling Seq from C/C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../build.html">Building from Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internals.html">Compiler Internals</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="doxygen.html">Compiler API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="doxygen.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doxygen.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="doxygen.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="doxygen.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doxygen.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doxygen.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doxygen.html#unions">Unions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doxygen.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doxygen.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doxygen.html#defines">Defines</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="doxygen.html#typedefs">Typedefs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="typedef_format_8h_1a2faeea37943666d7bb5d0f244b343d4c.html">Typedef fmt::v6::align_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1a4857428a0c57b3f8d5e02490fe1b3611.html">Typedef fmt::v6::basic_parse_context</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_printf_8h_1a11ac176f64394ee937a199849baca641.html">Typedef fmt::v6::basic_printf_context_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_format_8h_1ade4c240a7fe32a5c38bc5876a86064d8.html">Typedef fmt::v6::basic_writer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1a39869f9f5461e912512bf02c30346864.html">Typedef fmt::v6::bool_constant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1a27eae41b1915cad828a4e9d7a3dc878d.html">Typedef fmt::v6::buffer_context</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1a6a50b38be04d0616fa354c19fd1fe3c3.html">Typedef fmt::v6::char_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1add29051cd8cf9b49c9a1f1fa7780add0.html">Typedef fmt::v6::conditional_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_posix_8h_1ae842ed76f0ef8c13542cc93818ecfb78.html">Typedef fmt::v6::cstring_view</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1a43da2a686e8ee8b319a4c63faa9f0e70.html">Typedef fmt::v6::enable_if_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_format_8h_1ac4b65d31fca2c1d3fbeac7d848fa7ad2.html">Typedef fmt::v6::format_args_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1aed3c5c3c9167d5cbdfeb3782ef8b7959.html">Typedef fmt::v6::format_context</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_format_8h_1a0c240bc0166ebef7d484dc424a90149e.html">Typedef fmt::v6::format_context_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1acff11c68830a9c08781d1acea4a09ee6.html">Typedef fmt::v6::format_parse_context</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_format_8h_1a6f717b66aca7d8744657053249f0e58e.html">Typedef fmt::v6::format_specs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_format_8h_1a777b93772229ea2def6c717d4fc4ec7a.html">Typedef fmt::v6::format_to_n_args</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_format_8h_1a9f56dd4c44ac6615c0b8da0aa6db4adf.html">Typedef fmt::v6::format_to_n_context</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1a968ec6bde8e9db9b16b382392df5d135.html">Typedef fmt::v6::has_formatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1af90c3b40be924daa2646c06914e8dd0d.html">Typedef fmt::v6::internal::all_true</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_format_8h_1af3598e27b41bc149d4d7d40b40264cf0.html">Typedef fmt::v6::internal::checked_ptr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_format-inl_8h_1afe32394a623ea7114ab37829fd42d098.html">Typedef fmt::v6::internal::format_func</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1a201ff17a0aab14ec0f5ba3cc5e3b3fff.html">Typedef fmt::v6::internal::has_fallback_formatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_ranges_8h_1a6c5768f7dc14bc423d395101d95a7108.html">Typedef fmt::v6::internal::index_sequence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_format_8h_1a0205a529cec421f89fac2e6373bab406.html">Typedef fmt::v6::internal::is_integer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_format_8h_1a9fb0b5638f62f4b3b520de50ac23251d.html">Typedef fmt::v6::internal::iterator_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1ae4e8c7425dbd630330fbfbe6cf2ae2f9.html">Typedef fmt::v6::internal::long_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_ranges_8h_1ac26b197a0cd3bf090bd95f4f74d9e645.html">Typedef fmt::v6::internal::make_index_sequence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1ae8fc25414d5d31741853e94fc54df432.html">Typedef fmt::v6::internal::mapped_type_constant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_format_8h_1a934ff55276319e5bed6c010c2a9ed3f7.html">Typedef fmt::v6::internal::needs_conversion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_format_8h_1a7694824cd3ed212a6e47ba20dbb672ff.html">Typedef fmt::v6::internal::uint32_or_64_or_128_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_format_8h_1a7f3a90085a16be4d9eb22e9b9ef22f87.html">Typedef fmt::v6::internal::uintptr_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1a6940a48bb049eaa01366b76d11b9caf1.html">Typedef fmt::v6::internal::ulong_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_format_8h_1a5a96d99e56db082941b1936cbd973436.html">Typedef fmt::v6::internal::writer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_format_8h_1a15e5cb5f70cf79b7c2ed12a05c9399a1.html">Typedef fmt::v6::memory_buffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1a31fdb8f3ae52ac3227f24cc0b6ee0b85.html">Typedef fmt::v6::parse_context</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_printf_8h_1a3bd769b87f9fb9045a8de9586e61159a.html">Typedef fmt::v6::printf_args</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_printf_8h_1ac99e0e451a12eebc84a20ff8b94a7e9f.html">Typedef fmt::v6::printf_context</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1a4e36dd94ea4e187df1fb3088ba7c8d75.html">Typedef fmt::v6::remove_const_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1ababc62cfc8a3af8cdd0694c73a1d24eb.html">Typedef fmt::v6::remove_cvref_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1ae4e48b15c26068e3e106bcde05e4b120.html">Typedef fmt::v6::remove_reference_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_format_8h_1a70418e0b1e9c5f578d2c991e10bb89a3.html">Typedef fmt::v6::sign_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1a4074f7ef8c37b344ef1f77ebe1c7d724.html">Typedef fmt::v6::string_view</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1a47869670d22f3ca94d82b51c47386e76.html">Typedef fmt::v6::void_t</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Typedef fmt::v6::wcstring_view</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1ae514fba8ccc510222d12b1cacbe8f2f0.html">Typedef fmt::v6::wformat_context</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1a7a6bfa33b0737e85cdb2c3d16e68663c.html">Typedef fmt::v6::wformat_parse_context</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_format_8h_1ab53fad6ee4dabf5afdf5203cd2364597.html">Typedef fmt::v6::wmemory_buffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1a2eefc755d9285267c1a21edf371593ab.html">Typedef fmt::v6::wparse_context</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_printf_8h_1a6ec9ec781496c801995a1d5589b6db62.html">Typedef fmt::v6::wprintf_args</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_printf_8h_1a91f909b09a98ae1772b7a84962145c85.html">Typedef fmt::v6::wprintf_context</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_format_8h_1a194cd23cbbc52b7346f41ec3ec0759df.html">Typedef fmt::v6::writer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_core_8h_1ab712bf58293acbb6a430130a8bc5a3af.html">Typedef fmt::v6::wstring_view</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_format_8h_1ac22ad5a4ca4066f453d20b2a350d47b0.html">Typedef fmt::v6::wwriter</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Seq</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="doxygen.html">Compiler API</a> &raquo;</li>
+        
+      <li>Typedef fmt::v6::wcstring_view</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/typedef_posix_8h_1ab264dddcc47410ea1abe8124ae3c461a.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="typedef-fmt-v6-wcstring-view">
+<span id="exhale-typedef-posix-8h-1ab264dddcc47410ea1abe8124ae3c461a"></span><h1>Typedef fmt::v6::wcstring_view<a class="headerlink" href="#typedef-fmt-v6-wcstring-view" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_compiler_util_fmt_posix.h.html#file-compiler-util-fmt-posix-h"><span class="std std-ref">File posix.h</span></a></p></li>
+</ul>
+<div class="section" id="typedef-documentation">
+<h2>Typedef Documentation<a class="headerlink" href="#typedef-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp type">
+<dt id="_CPPv4N2v63fmt13wcstring_viewE">
+<span id="_CPPv3N2v63fmt13wcstring_viewE"></span><span id="_CPPv2N2v63fmt13wcstring_viewE"></span><span class="target" id="posix_8h_1ab264dddcc47410ea1abe8124ae3c461a"></span><em class="property">using </em><code class="sig-prename descclassname">v6::fmt<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">wcstring_view</code> = basic_cstring_view&lt;wchar_t&gt;<a class="headerlink" href="#_CPPv4N2v63fmt13wcstring_viewE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="typedef_core_8h_1ae514fba8ccc510222d12b1cacbe8f2f0.html" class="btn btn-neutral float-right" title="Typedef fmt::v6::wformat_context" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="typedef_core_8h_1a47869670d22f3ca94d82b51c47386e76.html" class="btn btn-neutral float-left" title="Typedef fmt::v6::void_t" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, seq-lang
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

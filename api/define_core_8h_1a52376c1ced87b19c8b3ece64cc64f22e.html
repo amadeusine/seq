@@ -1,0 +1,319 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Define FMT_NVCC &mdash; Seq 0.9.7 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Define FMT_OVERRIDE" href="define_core_8h_1a023c6c178e254d81d578b90921804b1c.html" />
+    <link rel="prev" title="Define FMT_NUMERIC_ALIGN" href="define_format_8h_1a63af744c9637f08a1e29893868790c90.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #333131" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Seq
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookbook.html">Cookbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python.html">Calling Python from Seq</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../embed.html">Calling Seq from C/C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../build.html">Building from Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internals.html">Compiler Internals</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="doxygen.html">Compiler API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="doxygen.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doxygen.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="doxygen.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="doxygen.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doxygen.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doxygen.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doxygen.html#unions">Unions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doxygen.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="doxygen.html#variables">Variables</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="doxygen.html#defines">Defines</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="define_lang_2func_8cpp_1aaa34a9245e2800a2b6f5d27bc35aa3fd.html">Define ENSURE_NO_DUP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_format_8h_1a701339e31b08c541a11ed944cc20b856.html">Define FMT_ALWAYS_INLINE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1a9a4960b70582ed2620911a0b75dce0b5.html">Define FMT_API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1a03e7ee720f43adc7d83c652a6a5dd5f8.html">Define FMT_ASSERT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1a887c191adf8cfaf06ed40b5c4d487343.html">Define FMT_BEGIN_NAMESPACE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_format-inl_8h_1ab8efe0100a6d7cc74729f5bf7537799c.html">Define FMT_CATCH</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_format_8h_1a058e2c3eea88d232a1056a0bc6487e37.html">Define FMT_CLANG_VERSION</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1a69201cb276383873487bf68b4ef8b4cd.html">Define FMT_CONSTEXPR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1af4388801466a5994a363d6005616371a.html">Define FMT_CONSTEXPR_DECL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_format_8h_1af87bd0133efd40a100a5d27980c75f99.html">Define FMT_CUDA_VERSION</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1a8aba8a78c514e176e0dd0a159de7a369.html">Define FMT_DEPRECATED</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1a2b6d307802175823274f07475e458a34.html">Define FMT_DEPRECATED_ALIAS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_format_8h_1a1be6f36c83755510a646967d340e8493.html">Define FMT_DEPRECATED_PERCENT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1a809ce36bdf78b55c536fbca340bfec9c.html">Define FMT_DETECTED_NOEXCEPT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1ab02671eb0d43965fe2957e844f427451.html">Define FMT_ENABLE_IF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1ae0d2fbdf031547a949fc7e1c0b3c97f1.html">Define FMT_END_NAMESPACE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1a5d3b416a99857b69e3b7de8e88c71ff3.html">Define FMT_EXCEPTIONS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1a3823320bf1dc3274b4352b910a679e4f.html">Define FMT_EXTERN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1ac2dae898017bb434b6cffd0df3c5fc0c.html">Define FMT_EXTERN_TEMPLATE_API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_format_8h_1a35d4bc2bf717ac7731de7713c54175bb.html">Define FMT_FALLTHROUGH</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_format_8h_1a137cd833c17637f6573327878a9dec4c.html">Define FMT_FORMAT_AS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_format_8h_1a02c8898388e0ae59aab58be14fcd4e05.html">Define FMT_FUNC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1a4f5db4f97e31a127b1236d1ff412bb0c.html">Define FMT_GCC_VERSION</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_format_8h_1a160d3314a3cdbd49e187b75d6ce2a652.html">Define FMT_HAS_BUILTIN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1a55d7b78b0300ddda018f77208e80f3e9.html">Define FMT_HAS_CPP_ATTRIBUTE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1a8e7a33185c7fc32dd026773a8ece00b8.html">Define FMT_HAS_CXX11_NOEXCEPT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1a749169f277bb21ccf12b1c665e68e88a.html">Define FMT_HAS_FEATURE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1a1e3ffe834c427bc295b6880efcd17976.html">Define FMT_HAS_GXX_CXX11</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1afa144e698f8df527d6e51688eb9abbd1.html">Define FMT_HAS_INCLUDE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_format_8h_1a061a90c1c2008acd7b0161cde41c1a11.html">Define FMT_ICC_VERSION</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1a750d1276ba35fb73b8f2998389a5f8c6.html">Define FMT_INLINE_NAMESPACE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1a363cb0623e6975ff2b357a52a03e4728.html">Define FMT_MSC_VER</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1aef128913e8400683b1cbd1a3a2e11df3.html">Define FMT_NOEXCEPT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_chrono_8h_1a0c2d874e178da493766bca4f1b898780.html">Define FMT_NOMACRO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1ac9411ed6305aee71472718fa55fcc352.html">Define FMT_NORETURN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_format_8h_1a63af744c9637f08a1e29893868790c90.html">Define FMT_NUMERIC_ALIGN</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Define FMT_NVCC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1a023c6c178e254d81d578b90921804b1c.html">Define FMT_OVERRIDE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_posix_8h_1a6fa0773ef89920062fe6ab8b6e3cf337.html">Define FMT_POSIX</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_posix_8h_1aa693a9f0c55e9b081f1ea5bf04968dd7.html">Define FMT_POSIX_CALL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_format-inl_8h_1aeff75c93a29bc942ca36b31a4b634fe9.html">Define FMT_POWERS_OF_10</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_ranges_8h_1ad1c3ab4ad2c95d3f313323dbef5585df.html">Define FMT_RANGE_OUTPUT_LENGTH_LIMIT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_posix_8h_1a9d6790ac79298b8abd2472500422e138.html">Define FMT_RETRY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_posix_8h_1a54f7e73fc1fc6ded8358c6339b51bde7.html">Define FMT_RETRY_VAL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_chrono_8h_1a8e36408d8f476cd09c46417ab03f458e.html">Define FMT_SAFE_DURATION_CAST</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_format-inl_8h_1a9a9bb3caa94066b3adc175bb24cb1783.html">Define FMT_SNPRINTF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_format_8h_1a09119ad072f708d17b88704fa898aff0.html">Define FMT_STRING</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_format_8h_1af95479747d61199a48588c47ba9081ef.html">Define FMT_STRING_IMPL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_posix_8h_1acca658935a0993e7cf549b4a5be255a3.html">Define FMT_SYSTEM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_format_8h_1ad9e2ed6d3b432a04c9622c34a2495304.html">Define FMT_THROW</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_format-inl_8h_1a4aa79926398ee27fe7d6db8b0dd54edf.html">Define FMT_TRY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1a1b33b94a68ab12b7b4e7051da8a361f5.html">Define FMT_TYPE_CONSTANT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1a739a7ff96b6dfd65a4de8fe003f5b233.html">Define FMT_USE_CONSTEXPR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_posix_8h_1a4107274242b7f99d9559aabd297f7534.html">Define FMT_USE_FCNTL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_format_8h_1a25c2cdf9765d15576333ed86298422c5.html">Define FMT_USE_GRISU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1a13e53e6202856108f878beff6278417b.html">Define FMT_USE_INT128</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1a65490b89e8bd22fd0b8ae4491643d60c.html">Define FMT_USE_NOEXCEPT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_format_8h_1aa06c9479545f2548568d10b697d7be00.html">Define FMT_USE_UDL_TEMPLATE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_format_8h_1a7c29e7b4a54045f13bd664979804998d.html">Define FMT_USE_USER_DEFINED_LITERALS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_format_8h_1a66278651d81592645cef28ca33a6ab92.html">Define FMT_USE_WINDOWS_H</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_core_8h_1a1a322107307b020b6eac933958da94f6.html">Define FMT_VERSION</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_jit_8cpp_1af039cc21a3132fdb4f8d4a9c57ac0250.html">Define FOREIGN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_jit_8h_1af039cc21a3132fdb4f8d4a9c57ac0250.html">Define FOREIGN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_lang_2seq_8cpp_1a546df7c50d60bc886d8ecd44ffc1ab10.html">Define LLVM_I32</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_common_8h_1a8343ea59ce6efb0eba0e4e054eaf61ef.html">Define SEQ_HAS_TAPIR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_common_8h_1a5d475453654af93d6203537bde0093ca.html">Define SEQ_RETURN_CLONE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_lang_2seq_8h_1a2313755916fd32e39954800affdd9fe5.html">Define SEQ_VERSION_MAJOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_lang_2seq_8h_1a68d05c689f70a5756e0eaff84f679ab6.html">Define SEQ_VERSION_MINOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define_lang_2seq_8h_1a5b9aada676ec5d60e9e7badb8d209354.html">Define SEQ_VERSION_PATCH</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="doxygen.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Seq</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="doxygen.html">Compiler API</a> &raquo;</li>
+        
+      <li>Define FMT_NVCC</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/define_core_8h_1a52376c1ced87b19c8b3ece64cc64f22e.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="define-fmt-nvcc">
+<span id="exhale-define-core-8h-1a52376c1ced87b19c8b3ece64cc64f22e"></span><h1>Define FMT_NVCC<a class="headerlink" href="#define-fmt-nvcc" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_compiler_util_fmt_core.h.html#file-compiler-util-fmt-core-h"><span class="std std-ref">File core.h</span></a></p></li>
+</ul>
+<div class="section" id="define-documentation">
+<h2>Define Documentation<a class="headerlink" href="#define-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp macro">
+<dt id="c.FMT_NVCC">
+<span class="target" id="core_8h_1a52376c1ced87b19c8b3ece64cc64f22e"></span><code class="sig-name descname">FMT_NVCC</code><a class="headerlink" href="#c.FMT_NVCC" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="define_core_8h_1a023c6c178e254d81d578b90921804b1c.html" class="btn btn-neutral float-right" title="Define FMT_OVERRIDE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="define_format_8h_1a63af744c9637f08a1e29893868790c90.html" class="btn btn-neutral float-left" title="Define FMT_NUMERIC_ALIGN" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, seq-lang
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
